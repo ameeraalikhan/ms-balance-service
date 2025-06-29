@@ -32,4 +32,11 @@ public class BalanceController {
 	public Balance getBalanceByAccountId(@PathVariable String accountId) {
 		return balances.stream().filter(balance -> balance.getAccountId().equals(accountId)).findFirst().orElse(null);
 	}
+	
+	@GetMapping("/welcome")
+	public String welcomehello() {
+		return "hello welcme";
+		
+		
+	}
 }
